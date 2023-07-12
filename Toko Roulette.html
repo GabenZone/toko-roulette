@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Roulette</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+			font-size: 32px;
+			background-color: gray;
+			background-image: url("https://i.imgur.com/lcgT1Eo.png");
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+    </style>
+    <script>
+        function rollNormalChallenge() {
+            var texts = [
+                "Strimmer play Tank! - You must play a Tank Hero.",
+                "Strimmer play DPS! - You must play a DPS Hero.",
+                "Strimmer play Support! - You must play a Support Hero.",
+                "Gun Control - You must play a hero that doesnt use a gun.",
+                "Girl Power - You must play a female hero.",
+                "Boy Power - You must play a male hero.",
+				"Modern Warfare - You must play a hitscan hero.",
+				"Projectile Bomb - You must play a projectile hero.",
+				"Chivalry - You can only use melee and/or melee abilities.",
+				"Crab Rave - You must only move with A and D.",
+				"The Great Wall of Overwatch - You must play a hero with a shield.",
+				"Raid Boss - You must play a Tank Hero and mitigate over 5K Damage.",
+				"Ultra Marksman - You must play a DPS Hero and deal over 8K damage.",
+				"Angel from Above - You must play a Support Hero and heal over 8K damage.",
+				"Raid Boss Mk. II - You must play a Tank Hero and deal over 5K Damage.",
+				"Angel from Above Mk. II - You must play a Support Hero and deal over 6K damage.",
+				"OW1 Doomfist - You must play Doomfist as if he was still a DPS. You're not allowed to use Power Block.",
+				"Les go! - You must play your most played hero.",
+				"FUCK! - You must play your least played hero.",
+				"Despair - You must set your Render Scale to 50%.",
+				"Colorblinded - You must set the color blind filter to Tritanopia.",
+				"Team Swap - Switch enemy colors to allies and allies colors to enemies.",
+				"Immersion - Disable your HUD and play like that.",
+				"Hooked In - Play Roadhog and hook at least 2 people off the map. If map has no pits, roll next.",
+				"Mr President Strat - You must play Doomfist and protect your teammates with your life.",
+				"Echoes Below - You must play Echo and duplicate a Support, DPS and Tank in the same match.",
+				"The Spawn of Satan - You must play as Mercy and only pocket a DPS.",
+				"OW1 Bastion - You must play as Bastion and whenever you use your turret you're not allowed to move.",
+				"Content - You must play Doomfist without using Ult, Slam or Power Block. Only Punch and Gun.",
+				"OW1 Orisa - You must play Orisa and never leave the objective and capture/push it with your life.",
+				"No Sights - You must play either Ashe, Widowmaker or Ana. You're not allowed to scope.",
+				"Quick Choice - The first hero said in the chat, you gotta play.",
+				"Pushover - If this next map is Push, you're not allowed to leave it.",
+				"Strat Chaos - Roll for 3 compatible strats. Whatever you get, you have to do all in 1 match."
+            ];
+            var randomIndex = Math.floor(Math.random() * texts.length);
+            var randomText = texts[randomIndex];
+            document.getElementById("result").innerHTML = randomText;
+        }
+		
+		function rollSeason5Challenge() {
+            var texts = [
+                "Wrath of the Demon Lord - You must play Reinhardt and you're only allowed to use Fire Strikes and Ult.",
+                "Gladiator Pride - You must play Junkerqueen and only duel the other tank. You're not allowed to cause damage to DPS or Support.",
+                "Flight of the Griffon - You must play Orisa and get at least 2 people off the map with your ult.",
+				"Tumbling Hive - You must play Wrecking Ball and protect the supports at all cost.",
+				"Slimy Skills - You must play Echo and duplicate the weakest opponent of the enemy line up.",
+				"Knight Honor - You must play Genji and defend the tank at all cost.",
+				"Science or Sorcery? - You must play Mei and you're only allowed to cause icicle damage when the passive activates.",
+				"Demon Queen - You must play Pharah and knockback at least 2 enemies to the depths of hell.",
+				"Aztec Death - You must play Reaper and you're not allowed to use Wraith Form.",
+				"Special Delivery - You must play Sojourn and every time you hit somebody with a Railgun shot, you must say 'Here's your coffee!'.",
+				"FNAF 2 Reference - You must play Sombra and stop at least 1 Support Ult with Hack if applicable.",
+				"Wizardy for Dummies - You must play Symmetra and get 5 kills with your turrets.",
+				"Biolitic Shock - You must play Torbjorn and get 2 hammer kills.",
+				"Nature's Call - You must play Widowmaker and only snipe from patches of grass if applicable.",
+				"No Good Rogue - You must play Kiriko and you're not allowed to heal.",
+				"Yes, Good Cleric - You must play Lifeweaver and you're only allowed to heal.",
+				"A Bard Show - You must play Lucio and sing all your sentences for the remainder of the match.",
+				"Thicc Thighs Save Lifes - You must play Mercy and talk in a e-girl voice for the remainder of the match.",
+				"The Black Plague - You must play Moira and you're only allowed to use damage abilities.",
+				"The Stars Said So - You must play Zenyatta and you're not allowed to use Discord Orb.",
+				"Big Elfin' Deal - You must play Tracer and stick all of your pulse bombs.",
+				"Tropical Beating - You must play Doomfist and you're not allowed enter or touch any shadows or dark areas in the map.",
+				"Strat Spell - You must do the inverse of the next challenge if applicable."
+            ];
+            var randomIndex = Math.floor(Math.random() * texts.length);
+            var randomText = texts[randomIndex];
+            document.getElementById("resultS5").innerHTML = randomText;
+        }
+		
+		function rollSummerGamesChallenge() {
+            var texts = [
+                "Signature Move (Volleyball) - You must play Winston and do at least 2 self-passes into a spiked goal.",
+				"Bonus Balls! (Lucioball Remix) - Score at least 3 bonus balls before the match ends.",
+				"Cheater (Volleyball) - You must play Echo or Pharah and you're not allowed to touch the ground.",
+				"Signature Move (Lucioball) - You must play Winston and do at least 2 self-passes into a spiked goal.",
+				"Super Caster (Volleyball) - You must talk in a announcer voice for the remainder of the match.",
+				"Signature Move (Lucioball Remix) - You must play Winston and do at least 2 self-passes into a spiked goal.",
+				"Super Caster (Volleyball) - You must talk in a announcer voice for the remainder of the match.",
+				"Signature Move (Lucioball) - You must play Winston and do at least 2 self-passes into a spiked goal."
+            ];
+            var randomIndex = Math.floor(Math.random() * texts.length);
+            var randomText = texts[randomIndex];
+            document.getElementById("resultSummer").innerHTML = randomText;
+        }
+    </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+		<img src="https://i.imgur.com/K2twzOJ.png" alt="Toko Roulette." title="Toko Roulette" style="display: block; margin-left: auto; margin-right: auto; width: 20%">
+	<div style="background-color: rgba(0,0,0,0.5)">	
+		<hr>
+		<button onclick="rollNormalChallenge()" style="font-size: 24px">Roll Normal Challenge</button>
+		<p id="result" style="color:white"></p>
+		<button onclick="rollSeason5Challenge()" style="font-size: 24px">Roll Season 5 Challenge</button>
+		<p id="resultS5" style="color:white"></p>
+		<button onclick="rollSummerGamesChallenge()" style="font-size: 24px">Roll Summer Games Challenge</button>
+		<p id="resultSummer" style="color:white"></p>
+		<hr>
+	</div>
+	<a href="https://www.twitch.tv/its_toko" target="_blank">
+	<button style="font-size: 24px; color: purple; ">Twitch  <i class="fa fa-twitch"></i></button>
+	<br>
+	</a>
+	<a href="https://www.youtube.com/@Its_Toko" target="_blank">
+	<button style="font-size: 24px; color: red; ">Youtube  <i class="fa fa-youtube"></i></button>
+	</a>
+</body>
+</html>
