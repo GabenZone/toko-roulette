@@ -20,47 +20,152 @@
     <script>
         function rollNormalChallenge() {
             var texts = [
-                "Strimmer play Tank! - You must play a Tank Hero.",
-                "Strimmer play DPS! - You must play a DPS Hero.",
-                "Strimmer play Support! - You must play a Support Hero.",
-                "Gun Control - You must play a hero that doesnt use a gun.",
-                "Girl Power - You must play a female hero.",
-                "Boy Power - You must play a male hero.",
-				"Modern Warfare - You must play a hitscan hero.",
-				"Projectile Bomb - You must play a projectile hero.",
-				"Chivalry - You can only use melee and/or melee abilities.",
-				"Crab Rave - You must only move with A and D.",
-				"The Great Wall of Overwatch - You must play a hero with a shield.",
-				"Raid Boss - You must play a Tank Hero and mitigate over 5K Damage.",
-				"Ultra Marksman - You must play a DPS Hero and deal over 8K damage.",
-				"Angel from Above - You must play a Support Hero and heal over 8K damage.",
-				"Raid Boss Mk. II - You must play a Tank Hero and deal over 5K Damage.",
-				"Angel from Above Mk. II - You must play a Support Hero and deal over 6K damage.",
-				"OW1 Doomfist - You must play Doomfist as if he was still a DPS. You're not allowed to use Power Block.",
-				"Les go! - You must play your most played hero.",
-				"FUCK! - You must play your least played hero.",
-				"Tweet Tweet - The first message you see in chat, you gotta tweet that.",
-				"Despair - You must set your Render Scale to 50%.",
-				"Colorblinded - You must set the color blind filter to Tritanopia.",
-				"Team Swap - Switch enemy colors to allies and allies colors to enemies.",
-				"Immersion - Disable your HUD and play like that.",
-				"The Final Stand - Play a entire match standing up.",
-				"Hooked In - Play Roadhog and hook at least 2 people off the map. If map has no pits, roll next.",
-				"Mr President Strat - You must play Doomfist and protect your teammates with your life.",
-				"Echoes Below - You must play Echo and duplicate a Support, DPS and Tank in the same match.",
-				"The Spawn of Satan - You must play as Mercy and only pocket a DPS.",
-				"OW1 Bastion - You must play as Bastion and whenever you use your turret you're not allowed to move.",
-				"Content - You must play Doomfist without using Ult, Slam or Power Block. Only Punch and Gun.",
-				"OW1 Orisa - You must play Orisa and never leave the objective and capture/push it with your life.",
-				"The Key To Defeat - You can pick any hero. You must switch the ability keybinds to the first letters of the first message you see in chat.",
-				"No Sights - You must play either Ashe, Widowmaker or Ana. You're not allowed to scope.",
-				"Quick Choice - The first hero said in the chat, you gotta play.",
-				"Pushover - If this next map is Push, you're not allowed to leave it.",
-				"Strat Chaos - Roll for 3 compatible strats. Whatever you get, you have to do all in 1 match."
+			{
+				text: "Strimmer play Tank! - You must play a Tank Hero.",
+				image: "images/normal/tank_challenge.png"
+			},
+			{
+				text: "Strimmer play DPS! - You must play a DPS Hero.",
+				image: "images/normal/dps_challenge.png"
+			},
+			{
+				text: "Strimmer play Support! - You must play a Support Hero.",
+				image: "images/normal/support_challenge.png"
+			},
+			{
+				text: "Gun Control - You must play a hero that doesnt use a gun.",
+				image: "images/normal/no_guns.png"
+			},
+			{
+				text: "Girl Power - You must play a female hero.",
+				image: "images/normal/female_hero.png"
+			},
+			{
+				text: "Boy Power - You must play a male hero.",
+				image: "images/normal/male_hero.png"
+			},
+			{
+				text: "Modern Warfare - You must play a hitscan hero.",
+				image: "images/normal/hitscan_hero.png"
+			},
+			{
+				text: "Projectile Bomb - You must play a projectile hero.",
+				image: "images/normal/projectile_hero.png"
+			},
+			{
+				text: "Chivalry - You can only use melee and/or melee abilities.",
+				image: "images/normal/melee_only.png"
+			},
+			{
+				text: "Crab Rave - You must only move with A and D.",
+				image: "images/normal/crab_challenge.png"
+			},
+			{
+				text: "The Great Wall of Overwatch - You must play a hero with a shield.",
+				image: "images/normal/shield_challenge.png"
+			},
+			{
+				text: "Raid Boss - You must play a Tank Hero and mitigate over 5K Damage.",
+				image: "images/normal/raid_boss.png"
+			},
+			{
+				text: "Ultra Marksman - You must play a DPS Hero and deal over 8K damage.",
+				image: "images/normal/ultra_marksman.png"
+			},
+			{
+				text: "Angel from Above - You must play a Support Hero and heal over 8K damage.",
+				image: "images/normal/angel_above.png"
+			},
+			{
+				text: "Raid Boss Mk. II - You must play a Tank Hero and deal over 5K Damage.",
+				image: "images/normal/raid_boss_mk2.png"
+			},
+			{
+				text: "Angel from Above Mk. II - You must play a Support Hero and deal over 6K damage.",
+				image: "images/normal/angel_above_mk2.png"
+			},
+			{
+				text: "OW1 Doomfist - You must play Doomfist as if he was still a DPS. You're not allowed to use Power Block.",
+				image: "images/normal/doomfist_dps.png"
+			},
+			{
+				text: "Les go! - You must play your most played hero.",
+				image: "images/normal/les_go.png"
+			},
+			{
+				text: "FUCK! - You must play your least played hero.",
+				image: "images/normal/fuck.png"
+			},
+			{
+				text: "Despair - You must set your Render Scale to 50%.",
+				image: "images/normal/despair.png"
+			},
+			{
+				text: "Colorblinded - You must set the color blind filter to Tritanopia.",
+				image: "images/normal/colorblind.png"
+			},
+			{
+				text: "Team Swap - Switch enemy colors to allies and allies colors to enemies.",
+				image: "images/normal/team_swap.png"
+			},
+			{
+				text: "Immersion - Disable your HUD and play like that.",
+				image: "images/normal/hud_off.png"
+			},
+			{
+				text: "Hooked In - Play Roadhog and hook at least 2 people off the map. If map has no pits, roll next.",
+				image: "images/normal/hooked.png"
+			},
+			{
+				text: "Mr President Strat - You must play Doomfist and protect your teammates with your life.",
+				image: "images/normal/mr_president.png"
+			},
+			{
+				text: "Echoes Below - You must play Echo and duplicate a Support, DPS and Tank in the same match.",
+				image: "images/normal/echoes_below.png"
+			},
+			{
+				text: "The Spawn of Satan - You must play as Mercy and only pocket a DPS.",
+				image: "images/normal/satan_spawn.png"
+			},
+			{
+				text: "OW1 Bastion - You must play as Bastion and whenever you use your turret you're not allowed to move.",
+				image: "images/normal/ow1_bastion.png"
+			},
+			{
+				text: "Content - You must play Doomfist without using Ult, Slam or Power Block. Only Punch and Gun.",
+				image: "images/normal/content.png"
+			},
+			{
+				text: "OW1 Orisa - You must play Orisa and never leave the objective and capture/push it with your life.",
+				image: "images/normal/ow1_orisa.png"
+			},
+			{
+				text: "The Key To Defeat - You can pick any hero. You must switch the ability keybinds to the first letters of the first message you see in chat.",
+				image: "images/normal/keybind_challenge.png"
+			},
+			{
+				text: "No Sights - You must play either Ashe, Widowmaker or Ana. You're not allowed to scope.",
+				image: "images/normal/no_sights.png"
+			},
+			{
+				text: "Quick Choice - The first hero said in the chat, you gotta play.",
+				image: "images/normal/chat_choice.png"
+			},
+			{
+				text: "Pushover - If this next map is Push, you're not allowed to leave it. If it isnt, you can skip the challenge.",
+				image: "images/normal/push_challenge.png"
+			},
+			{
+				text: "Strat Chaos - Roll for 3 compatible strats. Whatever you get, you have to do all in 1 match.",
+				image: "images/normal/strat_chaos.png"
+			},
             ];
             var randomIndex = Math.floor(Math.random() * texts.length);
-            var randomText = texts[randomIndex];
+            var randomText = texts[randomIndex].text;
+			var randomImage = texts[randomIndex].image;
             document.getElementById("result").innerHTML = randomText;
+			document.getElementById("image").src = randomImage;
         }
 		
 		function rollSeason5Challenge() {
@@ -116,8 +221,11 @@
                 "Return To Sender - Deflect every type of ultimate in the game as Genji in a single play session.",
 				"Hero Mastery - Win at least 1 game with every hero in the game in a single play session.",
 				"Universe's Belly - Eat all types of ultimate in the game as Sigma or Dva in a single play session.",
+				"Mistery Box - Get 1 of each ultimate in the game in Mistery Heroes in a single play session.",
 				"No Bitches - Take off your glasses. Play like that.",
-				"Birthday Gift - The first person you see in chat, you gotta gift a sub to."
+				"Birthday Gift - The first person you see in chat, you gotta gift a sub to.",
+				"Tweet Tweet - The first message you see in chat, you gotta tweet that.",
+				"The Final Stand - Play a entire match standing up."
             ];
             var randomIndex = Math.floor(Math.random() * texts.length);
             var randomText = texts[randomIndex];
@@ -131,8 +239,17 @@
 		<img src="https://i.imgur.com/K2twzOJ.png" alt="Toko Roulette." title="Toko Roulette" style="display: block; margin-left: auto; margin-right: auto; width: 20%">
 	<div style="background-color: rgba(0,0,0,0.5)">	
 		<hr>
+		<p style="color:white">Normal Challenges: Easy to-do general challenges while still providing fun.</p>
 		<button onclick="rollNormalChallenge()" style="font-size: 24px">Roll Normal Challenge</button>
+		<br>
+		<img id="image" src="" width="128" height="128" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="result" style="color:white"></p>
+		<hr>
+	</div>
+	<br>
+	<div style="background-color:rgba(252,186,3,0.5)">
+		<hr>
+		<p style="color:white">Seasonal Challenges: Medium difficulty challenges that change with each new season.</p>
 		<button onclick="rollSeason5Challenge()" style="font-size: 24px">Roll Season 5 Challenge</button>
 		<p id="resultS5" style="color:white"></p>
 		<button onclick="rollSummerGamesChallenge()" style="font-size: 24px">Roll Summer Games Challenge</button>
@@ -140,8 +257,10 @@
 		<hr>
 	</div>
 	<br>
-	<div style="background-color: rgba(51,0,0,0.5)">
+	<div style="background-color: rgba(151,0,0,0.5)">
 		<hr>
+		<p style="color:white">Master Challenges: Hard difficulty challenges. Only for masters of Overwatch!</p>
+		<p style="color:red; font-size:16px">Proceed with caution...</p>
 		<button onclick="rollMasterChallenges()" style="font-size: 24px; color: red;">Roll Master Challenge</button>
 		<p id="resultMaster" style="color:white"></p>
 		<hr>
