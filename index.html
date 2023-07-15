@@ -170,33 +170,104 @@
 		
 		function rollSeason5Challenge() {
             var texts = [
-                "Wrath of the Demon Lord - You must play Reinhardt and you're only allowed to use Fire Strikes and Ult.",
-                "Gladiator Pride - You must play Junkerqueen and only duel the other tank. You're not allowed to cause damage to DPS or Support.",
-                "Flight of the Griffon - You must play Orisa and get at least 2 people off the map with your ult.",
-				"Tumbling Hive - You must play Wrecking Ball and protect the supports at all cost.",
-				"Slimy Skills - You must play Echo and duplicate the weakest opponent of the enemy line up.",
-				"Knight Honor - You must play Genji and defend the tank at all cost.",
-				"Science or Sorcery? - You must play Mei and you're only allowed to cause icicle damage when the passive activates.",
-				"Demon Queen - You must play Pharah and knockback at least 2 enemies to the depths of hell.",
-				"Aztec Death - You must play Reaper and you're not allowed to use Wraith Form.",
-				"Special Delivery - You must play Sojourn and every time you hit somebody with a Railgun shot, you must say 'Here's your coffee!'.",
-				"FNAF 2 Reference - You must play Sombra and stop at least 1 Support Ult with Hack if applicable.",
-				"Wizardy for Dummies - You must play Symmetra and get 5 kills. You're only allowed to use the turrets.",
-				"Biolitic Shock - You must play Torbjorn and get 2 hammer kills.",
-				"Nature's Call - You must play Widowmaker and only snipe from patches of grass if applicable.",
-				"No Good Rogue - You must play Kiriko and you're not allowed to heal.",
-				"Yes, Good Cleric - You must play Lifeweaver and you're only allowed to heal.",
-				"A Bard Show - You must play Lucio and sing all your sentences for the remainder of the match.",
-				"Thicc Thighs Save Lifes - You must play Mercy and talk in a e-girl voice for the remainder of the match.",
-				"The Black Plague - You must play Moira and you're only allowed to use damage abilities.",
-				"The Stars Said So - You must play Zenyatta and you're not allowed to use Discord Orb.",
-				"Big Elfin' Deal - You must play Tracer and stick all of your pulse bombs.",
-				"Tropical Beating - You must play Doomfist and you're not allowed enter or touch any shadows or dark areas in the map.",
-				"Strat Spell - You must do the inverse of the next challenge if applicable."
+			{
+				text: "Wrath of the Demon Lord - You must play Reinhardt and you're only allowed to use Fire Strikes and Ult.",
+				image: "images/season5/wrath_demonlord.png"
+			},
+			{
+				text: "Gladiator Pride - You must play Junkerqueen and only duel the other tank. You're not allowed to cause damage to DPS or Support.",
+				image: "images/season5/gladiator.png"
+			},
+			{
+				text: "Flight of the Griffon - You must play Orisa and get at least 2 people off the map with your ult.",
+				image: "images/season5/griffon.png"
+			},
+			{
+				text: "Tumbling Hive - You must play Wrecking Ball and protect the supports at all cost.",
+				image: "images/season5/honeycomb.png"
+			},
+			{
+				text: "Slimy Skills - You must play Echo and duplicate only the weakest opponent of the enemy line up.",
+				image: "images/season5/slime.png"
+			},
+			{
+				text: "Knight Honor - You must play Genji and defend the tank at all cost.",
+				image: "images/season5/knight_genji.png"
+			},
+			{
+				text: "Science or Sorcery? - You must play Mei and you're only allowed to cause icicle damage when the passive activates.",
+				image: "images/season5/alchemist.png"
+			},
+			{
+				text: "Demon Queen - You must play Pharah and knockback at least 2 enemies into the depths of hell.",
+				image: "images/season5/demon.png"
+			},
+			{
+				text: "Aztec Death - You must play Reaper and you're not allowed to use Wraith Form.",
+				image: "images/season5/aztec.png"
+			},
+			{
+				text: "Special Delivery - You must play Sojourn and every time you hit somebody with a Railgun shot, you must say 'Here's your coffee!'.",
+				image: "images/season5/coffee.png"
+			},
+			{
+				text: "Puppet Strings - You must play Sombra and stop at least 1 Support Ult with Hack if applicable.",
+				image: "images/season5/puppet.png"
+			},
+			{
+				text: "Wizardy for Dummies - You must play Symmetra and get 5 kills. You're only allowed to use the turrets.",
+				image: "images/season5/conjurer.png"
+			},
+			{
+				text: "Biolitic Shock - You must play Torbjorn and get 3 hammer kills.",
+				image: "images/season5/bioshock.png"
+			},
+			{
+				text: "Nature's Call - You must play Widowmaker and only snipe from patches of grass if applicable.",
+				image: "images/season5/nature.png"
+			},
+			{
+				text: "No Good Rogue - You must play Kiriko and you're not allowed to heal.",
+				image: "images/season5/rogue.png"
+			},
+			{
+				text: "Yes, Good Cleric - You must play Lifeweaver and you're only allowed to heal.",
+				image: "images/season5/cleric.png"
+			},
+			{
+				text: "A Bard Show - You must play Lucio and sing all your sentences for the remainder of the match.",
+				image: "images/season5/bard.png"
+			},
+			{
+				text: "Thicc Thighs Save Lifes - You must play Mercy and talk in a e-girl voice for the remainder of the match.",
+				image: "images/season5/thicc_thighs.png"
+			},
+			{
+				text: "The Black Plague - You must play Moira and you're only allowed to use damage abilities.",
+				image: "images/season5/plague.png"
+			},
+			{
+				text: "The Stars Said So - You must play Zenyatta and you're not allowed to use Discord Orb.",
+				image: "images/season5/star.png"
+			},
+			{
+				text: "Big Elfin' Deal - You must play Tracer and stick all of your pulse bombs.",
+				image: "images/season5/adventurer.png"
+			},
+			{
+				text: "Tropical Beating - You must play Doomfist and you're not allowed enter or touch any shadows or dark areas in the map.",
+				image: "images/season5/tropical.png"
+			},
+			{
+				text: "Strat Spell - You must do the inverse of the next challenge if applicable.",
+				image: "images/season5/spell.png"
+			}
             ];
             var randomIndex = Math.floor(Math.random() * texts.length);
-            var randomText = texts[randomIndex];
+            var randomText = texts[randomIndex].text;
+			var randomImage = texts[randomIndex].image;
             document.getElementById("resultS5").innerHTML = randomText;
+			document.getElementById("imageS5").src = randomImage;
         }
 		
 		function rollSummerGamesChallenge() {
@@ -222,7 +293,7 @@
 				"Hero Mastery - Win at least 1 game with every hero in the game in a single play session.",
 				"Universe's Belly - Eat all types of ultimate in the game as Sigma or Dva in a single play session.",
 				"Mistery Box - Get 1 of each ultimate in the game in Mistery Heroes in a single play session.",
-				"No Bitches - Take off your glasses. Play like that.",
+				"Got Bitches? - Take off your glasses. Play like that.",
 				"Birthday Gift - The first person you see in chat, you gotta gift a sub to.",
 				"Tweet Tweet - The first message you see in chat, you gotta tweet that.",
 				"The Final Stand - Play a entire match standing up."
@@ -251,6 +322,8 @@
 		<hr>
 		<p style="color:white">Seasonal Challenges: Medium difficulty challenges that change with each new season.</p>
 		<button onclick="rollSeason5Challenge()" style="font-size: 24px">Roll Season 5 Challenge</button>
+		<br>
+		<img id="imageS5" src="" width="128" height="128" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="resultS5" style="color:white"></p>
 		<button onclick="rollSummerGamesChallenge()" style="font-size: 24px">Roll Summer Games Challenge</button>
 		<p id="resultSummer" style="color:white"></p>
