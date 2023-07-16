@@ -166,6 +166,8 @@
 			var randomImage = texts[randomIndex].image;
             document.getElementById("result").innerHTML = randomText;
 			document.getElementById("image").src = randomImage;
+			document.getElementById("image").width = "128";
+			document.getElementById("image").height = "128";
         }
 		
 		function rollSeason5Challenge() {
@@ -268,35 +270,60 @@
 			var randomImage = texts[randomIndex].image;
             document.getElementById("resultS5").innerHTML = randomText;
 			document.getElementById("imageS5").src = randomImage;
+			document.getElementById("imageS5").width = "128";
+			document.getElementById("imageS5").height = "128";
         }
 		
 		function rollSummerGamesChallenge() {
             var texts = [
-                "Signature Move (Volleyball) - You must play Winston and do at least 2 self-passes into a spiked goal.",
-				"Bonus Balls! (Lucioball Remix) - Score at least 3 bonus balls before the match ends.",
-				"Cheater (Volleyball) - You must play Echo or Pharah and you're not allowed to touch the ground.",
-				"Boostio!! (Lucioball) - Score at least 2 goals using your ult.",
-				"Super Caster (Volleyball) - You must talk in a announcer voice for the remainder of the match.",
-				"The Worst Tactic (Lucioball Remix) - Score at least 2 goals using only your melee. You're not allowed to use the Boop.",
-				"'Genji is OP' (Volleyball) - You must play Genji and you're not allowed to use your dash.",
-				"Goalie Only (Lucioball) - You're not allowed to leave the goal at all. Defend everything that comes at you!",
-				"Junior League (Volleyball) - You must play Widowmaker and try your best to win."
+			{
+				text: "Signature Move (Volleyball) - You must play Winston and do at least 2 self-passes into a spiked goal.",
+				image: "images/summer_games/signature_move.png"
+			},
+			{
+				text: "Bonus Balls! (Lucioball Remix) - Score at least 3 bonus balls before the match ends.",
+				image: "images/summer_games/bonus_balls.png"
+			},
+			{
+				text: "Cheater (Volleyball) - You must play Echo and you're not allowed to touch the ground.",
+				image: "images/summer_games/cheater.png"
+			},
+			{
+				text: "Boostio!! (Lucioball) - Score at least 2 goals using your ult.",
+				image: "images/summer_games/boostio.png"
+			},
+			{
+				text: "Super Caster (Volleyball) - You must talk in a announcer voice for the remainder of the match.",
+				image: "images/summer_games/caster.png"
+			},
+			{
+				text: "The Worst Tactic (Lucioball Remix) - Score at least 2 goals using only your melee. You're not allowed to use the Boop.",
+				image: "images/summer_games/worst_tactic.png"
+			},
+			{
+				text: "'Genji is OP' (Volleyball) - You must play Genji and you're not allowed to use your dash.",
+				image: "images/summer_games/genji_op.png"
+			},
+			{
+				text: "Goalie Only (Lucioball) - You're not allowed to leave the goal at all. Defend everything that comes at you!",
+				image: "images/summer_games/goalie.png"
+			},
+			{
+				text: "Junior League (Volleyball) - You must play Widowmaker and try your best to win.",
+				image: "images/summer_games/junior_league.png"
+			}
             ];
             var randomIndex = Math.floor(Math.random() * texts.length);
-            var randomText = texts[randomIndex];
+            var randomText = texts[randomIndex].text;
+			var randomImage = texts[randomIndex].image;
             document.getElementById("resultSummer").innerHTML = randomText;
+			document.getElementById("imageSummer").src = randomImage;
+			document.getElementById("imageSummer").width = "128";
+			document.getElementById("imageSummer").height = "128";
         }
 		
 		function rollMasterChallenges() {
             var texts = [
-                "Return To Sender - Deflect every type of ultimate in the game as Genji in a single play session.",
-				"Hero Mastery - Win at least 1 game with every hero in the game in a single play session.",
-				"Universe's Belly - Eat all types of ultimate in the game as Sigma or Dva in a single play session.",
-				"Mistery Box - Get 1 of each ultimate in the game in Mistery Heroes in a single play session.",
-				"Got Bitches? - Take off your glasses. Play like that.",
-				"Birthday Gift - The first person you see in chat, you gotta gift a sub to.",
-				"Tweet Tweet - The first message you see in chat, you gotta tweet that.",
-				"The Final Stand - Play a entire match standing up."
             ];
             var randomIndex = Math.floor(Math.random() * texts.length);
             var randomText = texts[randomIndex];
@@ -313,7 +340,7 @@
 		<p style="color:white">Normal Challenges: Easy to-do general challenges while still providing fun.</p>
 		<button onclick="rollNormalChallenge()" style="font-size: 24px">Roll Normal Challenge</button>
 		<br>
-		<img id="image" src="" width="128" height="128" style="vertical-align:middle; margin: 10px;"></img>
+		<img id="image" src="" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="result" style="color:white"></p>
 		<hr>
 	</div>
@@ -323,9 +350,11 @@
 		<p style="color:white">Seasonal Challenges: Medium difficulty challenges that change with each new season.</p>
 		<button onclick="rollSeason5Challenge()" style="font-size: 24px">Roll Season 5 Challenge</button>
 		<br>
-		<img id="imageS5" src="" width="128" height="128" style="vertical-align:middle; margin: 10px;"></img>
+		<img id="imageS5" src="" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="resultS5" style="color:white"></p>
 		<button onclick="rollSummerGamesChallenge()" style="font-size: 24px">Roll Summer Games Challenge</button>
+		<br>
+		<img id="imageSummer" src="" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="resultSummer" style="color:white"></p>
 		<hr>
 	</div>
@@ -333,8 +362,9 @@
 	<div style="background-color: rgba(151,0,0,0.5)">
 		<hr>
 		<p style="color:white">Master Challenges: Hard difficulty challenges. Only for masters of Overwatch!</p>
-		<p style="color:red; font-size:16px">Proceed with caution...</p>
-		<button onclick="rollMasterChallenges()" style="font-size: 24px; color: red;">Roll Master Challenge</button>
+		<p style="color:red; font-size:16px">Unavailable for now...</p>
+		<p style="color:red; font-size:16px">Reworking.</p>
+		<button onclick="rollMasterChallenges" style="font-size: 24px; color: red;">Roll Master Challenge</button>
 		<p id="resultMaster" style="color:white"></p>
 		<hr>
 	</div>
