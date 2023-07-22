@@ -178,6 +178,10 @@
 					image: "images/normal/gratitude.png"
 				},
 				{
+					text: "OW1 Sombra - You must play Sombra and you're not allowed to hack while invisible.",
+					image: "images/normal/ow1_sombra.png"
+				},
+				{
 					text: "Strat Chaos - Roll for 3 compatible strats. Whatever you get, you have to do all in 1 match.",
 					image: "images/normal/strat_chaos.png"
 				}
@@ -346,33 +350,41 @@
 		function rollMasterChallenges() {
 			var texts = [
 				{
-					text: "Blindness - You must play blindfolded."
+					text: "Blinded - You must play blindfolded.",
+					image: "images/master/blinded.png"
 				},
 				{
-					text: "Final Stand - You must play standing up."
+					text: "Final Stand - You must play standing up.",
+					image: "images/master/standup.png"
 				},
 				{
-					text: "Inverse Gamer - You must play with your headphones, keyboard and mouse turned upside down."
+					text: "Inverse Gamer - You must play with your headphones, keyboard and mouse turned upside down.",
+					image: "images/master/inverse_gamer.png"
 				},
 				{
-					text: "#NamezForMod - You must mod Namez for the rest of the stream (you're allowed to take his mod power off if he abuses)."
+					text: "Switch It Up - Start out with Mouse and Keyboard. Once you die, switch to controller. If you die again, switch back. Rinse and repeat.",
+					image: "images/master/switch.png"
 				},
 				{
-					text: "Switch It Up - Start out with Mouse and Keyboard. Once you die, switch to controller. If you die again, switch back. Rinse and repeat."
+					text: "'Heal Me!' - You're not allowed to heal from Health Packs, only Supports.",
+					image: "images/master/healme.png"
 				},
 				{
-					text: "'Heal Me!' - You're not allowed to heal from Health Packs, only Supports."
+					text: "The Doomfist King - You must play Doomfist, get over 20 kills and 5K mitigated damage.",
+					image: "images/master/doomking.png"
 				},
 				{
-					text: "The Doomfist King - You must play Doomfist, get over 15 kills and 3K mitigated damage."
-				},
-				{
-					text: "Master Strat Chaos - Roll for 1 strat in each 'quickplay' category until they are all applicable. Do them."
+					text: "Master Strat Chaos - Roll for 1 strat in each 'quickplay' category until they are all applicable. Do them.",
+					image: "images/master/master_strat_chaos.png"
 				}
 			];
 			var randomIndex = Math.floor(Math.random() * texts.length);
 			var randomText = texts[randomIndex].text;
+			var randomImage = texts[randomIndex].image;
 			document.getElementById("resultMaster").innerHTML = randomText;
+			document.getElementById("imageMaster").src = randomImage;
+			document.getElementById("imageMaster").width = "128";
+			document.getElementById("imageMaster").height = "128";
 		}
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -383,10 +395,9 @@
 	<img src="https://i.imgur.com/K2twzOJ.png" alt="Toko Roulette." title="Toko Roulette"
 		style="display: block; margin-left: auto; margin-right: auto; width: 20%">
 	<p style="color:white; font-size:20px">Bored of tryharding? Try the Toko Roulette!</p>
-	<p style="color:yellow; font-size:20px">Dev Notes: Cute Meerkat :3</p>
+	<p style="color:yellow; font-size:20px">Dev Notes: Doomfist Chibi is the best chibi!</p>
 	<p style="color: lightskyblue; font-size:16px">Season 6 Update Release Date: August 17th or earlier!</p>
-	<img src="https://media.wired.com/photos/5933b82fa88f414d9a8c940d/master/w_463,h_711,c_limit/standing-meerkat.jpg"
-		style="vertical-align:middle; margin: 10px; width: 512px; height: 512px;"></img>
+	<img src="images/devImage.png" style="vertical-align:middle; margin: 10px; width: 512px; height: 512px;"></img>
 	<div style="background-color: rgba(0,0,0,0.5)">
 		<hr>
 		<p style="color:white">Normal Challenges: Easy to-do general challenges while still providing fun.</p>
@@ -415,9 +426,14 @@
 		<hr>
 		<p style="color:white">Master Challenges: Hard difficulty challenges. Only for masters of Overwatch!</p>
 		<button onclick="rollMasterChallenges()" style="font-size: 24px; color: red;">Roll Master Challenge</button>
+		<br>
+		<img id="imageMaster" src="" style="vertical-align:middle; margin: 10px;"></img>
 		<p id="resultMaster" style="color:white"></p>
 		<hr>
 	</div>
+	<a href="strats.html">
+		<button style="font-size: large;">Full Strat List</button>
+	</a>
 	<p style="color:white">You should also watch...</p>
 	<a href="https://www.twitch.tv/its_toko" target="_blank">
 		<button style="font-size: 24px; color: purple; ">Twitch <i class="fa fa-twitch"></i></button>
